@@ -13,12 +13,13 @@
 - destroy `DELETE /sharks/:id`
 
 ## 3. update this read me
-- how to run the app?
-  - do I need to `cd` into a folder?
-  - how to install (dev)/dependencies?
-  - how to run the tests?
-  - what port should we open in the web browser?
-  - what endpoints are available?
+- `cd` into server
+-`npm install --save -dev jest`
+-`npm run test`
+- open localhost:5000/ in the browser?
+-available endpoints:
+  -./localhost:5000/shark
+  -./localhost:5000/sharks/:id 
 - bugs?
 - link to deployed version
 - if you think that something is wrong with the tests, please create an issue
