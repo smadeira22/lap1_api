@@ -13,12 +13,12 @@
 - destroy `DELETE /sharks/:id`
 
 ## 3. Instructions
-- `cd` into server
--`npm install`
--To run tests type `npm run test` on the terminal
--To run local host on terminal `npm run dev` on the terminal
--open `localhost:5000/` in the browser
--available endpoints:
+- into server`cd` 
+- `npm install`
+- To run tests type `npm run test` on the terminal
+- To run local host on terminal `npm run dev` on the terminal
+- open `localhost:5000/` in the browser
+- available endpoints?
   -`./localhost:5000`
   -`./localhost:5000/shark`
   -`./localhost:5000/sharks/:id` 
