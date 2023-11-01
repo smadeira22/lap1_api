@@ -36,8 +36,8 @@ describe('api server', () => {
       expect(fileExists).toBe(true);
     });
 
-    test('fruits.json exists', () => {
-      const file = path.join(__dirname, '..', 'fruits.json');
+    test('sharks.json exists', () => {
+      const file = path.join(__dirname, '..', 'sharks.json');
       const fileExists = fs.existsSync(file);
       expect(fileExists).toBe(true);
     });
@@ -61,40 +61,40 @@ describe('api server', () => {
     })
   })
 
-  describe('GET /fruits -- index', () => {
-    test('responds to GET /fruits with status 200', (done) => {
+  describe('GET /sharks -- index', () => {
+    test('responds to GET /sharks with status 200', (done) => {
       request(api)
-        .get('/fruits')
+        .get('/sharks')
         .expect(200, done)
     })
 
-    test('GET /fruits display 4 elements in the web browser', async () => {
-      const response = await request(api).get('/fruits')
+    test('GET /sharks display 4 elements in the web browser', async () => {
+      const response = await request(api).get('/sharks')
       expect(response.body.length).toBe(4)
     })
   })
 
-  describe('GET /fruits/:id -- show', () => {
+  describe('GET /sharks/:id -- show', () => {
     test('responds to GET /fruits/1 with status 200', (done) => {
       request(api)
-        .get('/fruits/4')
+        .get('/sharks/4')
         .expect(200)
         .expect({ id: 4, name: 'date' }, done)
     })
 
     test('responds to a unknown goat id with a 404', (done) => {
       request(api)
-        .get('/fruits/42')
+        .get('/sharks/42')
         .expect(404)
-        .expect({ error: 'Fruit with id 42 not found' }, done);
+        .expect({ error: 'Shark with id 42 not found' }, done);
     });
   })
 
-  describe('POST /fruits', () => {
-    test('responds to posts /fruits with status 201', (done) => {
+  describe('POST /shark', () => {
+    test('responds to posts /shark with status 201', (done) => {
       const testData = { name: "The shark from jaws" }
       request(api)
-        .post('/fruits')
+        .post('/shark')
         .send(testData)
         .set('Accept', 'application/json')
         .expect(201)
@@ -105,20 +105,20 @@ describe('api server', () => {
       const testData = { age: 99 }
 
       request(api)
-        .post('/fruits')
+        .post('/sharks')
         .send(testData)
         .set('Accept', 'application/json')
         .expect(422)
-        .expect({ error: 'you need a name to create a fruit' }, done)
+        .expect({ error: 'you need a name to create a shark' }, done)
     });
   })
 
-  describe('PATCH /fruits/:id -- update', () => {
-    test('responds to PATCH /fruits/1 with status 200', (done) => {
+  describe('PATCH /sharks/:id -- update', () => {
+    test('responds to PATCH /sharks/1 with status 200', (done) => {
       const testData = { name: "meh" }
 
       request(api)
-        .patch('/fruits/2')
+        .patch('/sharks/2')
         .send(testData)
         .set('Accept', 'application/json')
         .expect(200)
@@ -129,7 +129,7 @@ describe('api server', () => {
       const testData = { age: 2 }
 
       request(api)
-        .patch('/fruits/2')
+        .patch('/sharks/2')
         .send(testData)
         .set('Accept', 'application/json')
         .expect(422)
@@ -140,27 +140,27 @@ describe('api server', () => {
       const testData = { name: "joker" }
 
       request(api)
-        .patch('/fruits/7')
+        .patch('/sharks/7')
         .send(testData)
         .set('Accept', 'application/json')
         .expect(404)
-        .expect({ error: 'cannot update missing fruit' }, done)
+        .expect({ error: 'cannot update missing shark' }, done)
     })
   })
 
   describe('DELETE', () => {
-    test('responds to delete /fruits/:id with status 204', (done) => {
-      request(api).delete('/fruits/1').expect(204, done);
+    test('responds to delete /sharks/:id with status 204', (done) => {
+      request(api).delete('/sharks/1').expect(204, done);
     });
 
     test('responds to with a status 404, if the shark does not exist', (done) => {
-      request(api).delete('/fruits/1').expect(204);
-      request(api).delete('/fruits/1').expect(404, done);
+      request(api).delete('/sharks/1').expect(204);
+      request(api).delete('/sharks/1').expect(404, done);
     });
 
     test('handles last id', (done) => {
-      request(api).delete('/fruits/5').expect(204);
-      request(api).delete('/fruits/1').expect(404, done);
+      request(api).delete('/sharks/5').expect(204);
+      request(api).delete('/sharks/1').expect(404, done);
 
     });
   })
