@@ -1,15 +1,10 @@
 {
-  "name": "lap1_api",
-  "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
     "coverage": "jest --coverage --silent"
   },
-  "keywords": [],
   "author": "rom-30",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2"
