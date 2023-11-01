@@ -12,14 +12,16 @@
 - update `PATCH /sharks/:id`
 - destroy `DELETE /sharks/:id`
 
-## 3. update this read me
+## 3. Instructions
 - `cd` into server
--`npm install --save -dev jest`
--`npm run test`
-- open localhost:5000/ in the browser?
+-`npm install`
+-To run tests type `npm run test` on the terminal
+-To run local host on terminal `npm run dev` on the terminal
+-open `localhost:5000/` in the browser
 -available endpoints:
-  -./localhost:5000/shark
-  -./localhost:5000/sharks/:id 
-- bugs?
-- link to deployed version
-- if you think that something is wrong with the tests, please create an issue
+  -`./localhost:5000`
+  -`./localhost:5000/shark`
+  -`./localhost:5000/sharks/:id` 
+- link to deployed version ``
+- 
+

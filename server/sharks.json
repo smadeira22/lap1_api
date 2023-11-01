@@ -1,14 +1,15 @@
 [
     {
-      "name": "tiger"
+      "name": "Tiger"
     },
     {
-      "name": "whale"
+      "name": "Whale"
     },
     {
-      "name": "basking"
+      "name": "Basking"
     },
     {
-      "name": "mango"
+      "name": "date",
+      "id": "4"
     }
   ]

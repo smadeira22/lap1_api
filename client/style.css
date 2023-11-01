@@ -1,0 +1,79 @@
+body {
+  /*  background-color: rgb(117, 117, 228);*/
+  margin: 0 0 100px 0px;
+   background-image: url('https://cdn.wallpapersafari.com/56/2/tqnkHf.jpg');
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:70px;
+    /*margin-bottom: 100px;*/
+}
+
+h1 {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 50px;
+  color: rgb(22, 22, 80);
+
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium';
+    font-size: 20px;
+    font-style: italic;
+  
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Gill Sans';
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-style: double;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+
+#display {
+    background-color: rgb(21, 21, 124);
+    padding: 10px;
+    border-style: double;
+    border-radius: 4px;
+    font-weight: bold;
+}
+#display2 {
+    background-color: rgb(21, 21, 124);
+    padding: 10px;
+    border-style: double;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: rgb(21, 21, 124);
+    padding: 10px;
+    border-style: double;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 20px;
+    font-family: 'Gill Sans';
+}
+
+#button {
+    display: flex;
+    gap:3em;
+}
+
+
+
+

@@ -75,7 +75,7 @@ describe('api server', () => {
   })
 
   describe('GET /sharks/:id -- show', () => {
-    test('responds to GET /fruits/1 with status 200', (done) => {
+    test('responds to GET /sharks/1 with status 200', (done) => {
       request(api)
         .get('/sharks/4')
         .expect(200)
